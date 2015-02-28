@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>navigationbar</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"top_temp"] forBarMetrics:UIBarMetricsDefault];
+    
+    UIButton *leftButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    leftButton.frame = CGRectMake(0.0f, 0.0f, 66.0f, 44.0f);
+    [leftButton setImage:[UIImage imageNamed:@"button_back"] forState:UIControlStateNormal];
+    [leftButton setImage:[UIImage imageNamed:@"button_back_hover"] forState:UIControlStateHighlighted];
+    [leftButton addTarget:self action:@selector(back:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc] initWithCustomView:leftButton];
+    UIBarButtonItem *leftSpacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:NULL];
+    leftSpacer.width = -15.0f;
+    self.navigationItem.leftBarButtonItems = @[leftSpacer, leftItem];
+    [leftItem release];
+    [leftSpacer release];
+    
+    UILabel *barTitleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 150.0f, 44.0f)];
+    barTitleLabel.textAlignment = NSTextAlignmentCenter;
+    barTitleLabel.textColor = [UIColor whiteColor];
+    barTitleLabel.backgroundColor = [UIColor clearColor];
+    barTitleLabel.font = [UIFont boldSystemFontOfSize:22.0f];
+    barTitleLabel.text = _contentTitle;
+    self.navigationItem.titleView = barTitleLabel;
+    [barTitleLabel release];</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>55920F9E-78D1-484E-B6F5-FA0D1CB4B147</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Layout NavigationBar</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
